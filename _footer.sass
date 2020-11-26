@@ -1,0 +1,112 @@
+.footer__container
+  display: flex
+
+  align-items: center
+  background: #111
+  justify-content: space-between
+  padding: 50px 50px
+.about
+  margin-right: 50px
+  width: 40%
+.about-title
+
+  position: relative
+  color: #fff
+  font-weight: 500
+  margin-bottom: 15px
+  display: inline-block
+.about-title:before
+  content: ''
+  position: absolute
+  bottom: -5px
+  left: 0
+  width: 50px
+  height: 2px
+  background: #f00
+.about__subtitle
+  color: #999
+  margin-bottom: 20px
+
+.about__sci
+  display: flex
+  align-items: start
+  margin: 20px
+
+.about__sci a
+  display: inline-block
+  width: 40px
+  height: 40px
+  background: #222
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 10px
+  text-decoration: none
+  border-radius: 4px
+
+.about__sci a:hover
+  background: #f00
+
+.fa
+  color: #fff
+  font-size: 20px
+
+.quicLinks
+
+  display: flex
+  justify-content: start
+  flex-direction: column
+
+.quicLinks a
+
+  color: #999
+  text-decoration: none
+  margin-bottom: 10px
+  display: inline-block
+
+.quicLinks a:hover
+  color: #fff
+.contact
+  display: flex
+  justify-content: start
+  flex-direction: column
+.contact a
+  color: #999
+  text-decoration: none
+  margin-bottom: 10px
+  display: inline-block
+.contact a:hover
+  color: #fff
+
+.span
+  color: #fff
+  margin-bottom: 20px
+.span a:hover
+  cursor: pointer
+
+.copyrightText
+  background: #181818
+  color: #999
+  text-align: center
+  padding: 8px 100px
+
+@media ( max-width: 762px )
+
+  .footer__container
+
+    padding: 50px 20px
+    flex-direction: column
+    align-items: center
+
+  .about,
+  .quicLinks,
+  .contact
+    width: 100%
+    margin: 5px
+
+  .header-sci,
+  .nav__bar,
+  .menu
+    display: none
+  .copyrightText
+    padding: 8px 30px
