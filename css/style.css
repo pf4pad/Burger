@@ -14,7 +14,7 @@ html, body {
 .container {
   max-width: 1170px;
   padding: 0px 10px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .header {

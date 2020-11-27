@@ -7,14 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-  height: 100%;
-}
-
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
+  margin: 0px auto;
   padding: 0px 10px;
-  margin: auto;
 }
 
 .header {
@@ -23,6 +19,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 50;
+  background-color: #017143;
 }
 
 .header:before {
@@ -32,7 +29,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #555373;
+  z-index: 2;
 }
 
 .header__body {
@@ -45,6 +42,7 @@ html, body {
 
 .header__logo {
   flex: 0 0 60px;
+  z-index: 3;
 }
 
 .header__logo img {
@@ -53,11 +51,13 @@ html, body {
 
 .header__list {
   display: flex;
+  position: relative;
+  z-index: 2;
 }
 
 .header__list li {
   list-style: none;
-  margin: 0 0 0 40px;
+  margin: 0px 0px 0px 20px;
 }
 
 .header__link {
@@ -67,27 +67,23 @@ html, body {
 }
 
 .header__burger {
-  display: block;
+  display: none;
 }
 
-@media (max-width: 1200px) {
-  .header__burger {
-    display: block;
+@media (max-width: 780px) {
+  .header__body {
+    height: 50px;
   }
-}
-
-@media (max-width: 991px) {
-  .header__burger {
-    display: block;
+  .header__logo {
+    flex: 0 0 40px;
   }
-}
-
-@media (max-width: 767px) {
   .header__burger {
     display: block;
     position: relative;
     width: 30px;
     height: 20px;
+    position: relative;
+    z-index: 3;
   }
   .header__burger span {
     background-color: #fff;
@@ -96,6 +92,7 @@ html, body {
     height: 2px;
     top: 9px;
     left: 0;
+    transition: all 0.3s ease 0s;
   }
   .header__burger:before,
   .header__burger:after {
@@ -105,6 +102,7 @@ html, body {
     width: 100%;
     height: 2px;
     left: 0;
+    transition: all 0.3s ease 0s;
   }
   .header__burger:before {
     top: 0;
@@ -112,12 +110,43 @@ html, body {
   .header__burger:after {
     bottom: 0;
   }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
   .header__menu {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: #017143;
+    padding: 70px 0px 0px 0px;
+    transition: all 0.8s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+    transition: all 0.8s ease 0s;
+  }
+  .header__list {
+    display: block;
+    text-align: center;
+  }
+  .header__list li {
+    margin: 0px 0px 40px 0px;
+  }
+  .content {
+    padding: 70px 0px 0px 0px;
+  }
+  body.lock {
+    overflow: hidden;
   }
 }

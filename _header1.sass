@@ -13,6 +13,8 @@
   width: 100%
   height: 100%
   background-color: #555373
+  z-index: 3
+
 .header__body
   position: relative
   display: flex
@@ -39,15 +41,9 @@
   font-weight: 400
   text-decoration: none
 .header__burger
-  display: block
-@media ( max-width: 1200px )
-  .header__burger
-    display: block
-@media ( max-width: 991px )
-  .header__burger
-    display: block
+  display: none
 
-@media ( max-width: 767px )
+@media ( max-width: 780px )
   .header__burger
     display: block
     position: relative
@@ -61,6 +57,7 @@
     height: 2px
     top: 9px
     left: 0
+    z-index: 5
   .header__burger:before,
   .header__burger:after
     content: ''
@@ -80,4 +77,3 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: #017143
